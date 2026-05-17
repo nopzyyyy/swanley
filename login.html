@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In – Swanley.io</title>
+    <meta name="description" content="Sign in to your Swanley.io dashboard. Manage templates, deploy servers, and watch live visitor traffic.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+    <div class="auth-layout">
+        <!-- Left Panel -->
+        <div class="auth-panel">
+            <div class="auth-panel__content">
+                <a href="index.html" class="auth-panel__logo">
+                    <img src="Untitled-1.png" alt="Swanley.io" class="auth-panel__logo-img">
+                    <span class="auth-panel__logo-text">swanley.io</span>
+                </a>
+                <h2 class="auth-panel__title">The platform for <span class="gradient-text">shipping pages</span> that actually convert.</h2>
+                <p class="auth-panel__desc">Sign in to your dashboard to manage templates, deploy servers, and watch live visitor traffic. All from one place.</p>
+                <div class="auth-panel__features">
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-lock-2-fill"></i></div>
+                        <div>
+                            <strong>End-to-end PGP encryption</strong>
+                            <span>Your keys never leave the browser.</span>
+                        </div>
+                    </div>
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-shield-check-fill"></i></div>
+                        <div>
+                            <strong>Built-in anti-bot protection</strong>
+                            <span>on every deployed page.</span>
+                        </div>
+                    </div>
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-line-chart-fill"></i></div>
+                        <div>
+                            <strong>Live visitor analytics</strong>
+                            <span>the moment a page goes up.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Login Form -->
+        <div class="auth-form-wrapper">
+            <div class="auth-card" id="login-card">
+                <h2 class="auth-card__title">Welcome back</h2>
+                <p class="auth-card__subtitle">Sign in to continue to your dashboard.</p>
+
+                <button class="btn btn--social" id="btn-telegram-login">
+                    <i class="ri-telegram-fill"></i>
+                    Sign in with Telegram
+                </button>
+
+                <div class="auth-divider">
+                    <span>or continue with email</span>
+                </div>
+
+                <form class="auth-form" id="login-form">
+                    <div class="form-group">
+                        <label class="form-label" for="login-username">Username</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-user-3-fill form-icon"></i>
+                            <input type="text" id="login-username" class="form-input" placeholder="your-handle" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="login-password">Password</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-lock-password-fill form-icon"></i>
+                            <input type="password" id="login-password" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+                            <button type="button" class="form-toggle-pw" id="toggle-login-pw" aria-label="Toggle password visibility">
+                                <i class="ri-eye-off-fill"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="form-forgot">Reset through Telegram</a>
+                    </div>
+                    <button type="submit" class="btn btn--glass btn--full btn--lg" id="login-submit">
+                        Sign in
+                    </button>
+                </form>
+
+                <p class="auth-card__footer">
+                    Don't have an account? <a href="register.html" class="auth-link">Create one</a>
+                </p>
+                <p class="auth-card__secure">
+                    <i class="ri-lock-2-line"></i> Encrypted connection. No personal data stored.
+                </p>
+                <p class="auth-card__terms">By continuing, you agree to our <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

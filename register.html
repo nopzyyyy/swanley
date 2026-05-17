@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account – Swanley.io</title>
+    <meta name="description" content="Create your Swanley.io account. Start building stunning web pages with AI-powered templates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+    <div class="auth-layout">
+        <!-- Left Panel -->
+        <div class="auth-panel">
+            <div class="auth-panel__content">
+                <a href="index.html" class="auth-panel__logo">
+                    <img src="Untitled-1.png" alt="Swanley.io" class="auth-panel__logo-img">
+                    <span class="auth-panel__logo-text">swanley.io</span>
+                </a>
+                <h2 class="auth-panel__title">Start building <span class="gradient-text">stunning pages</span> in minutes.</h2>
+                <p class="auth-panel__desc">Create your account and instantly access 500+ templates, AI page creation, and a powerful web control panel.</p>
+                <div class="auth-panel__features">
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-sparkling-2-fill"></i></div>
+                        <div>
+                            <strong>AI-Powered Generation</strong>
+                            <span>Create pages with a single prompt.</span>
+                        </div>
+                    </div>
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-time-fill"></i></div>
+                        <div>
+                            <strong>Deploy in under 60 seconds</strong>
+                            <span>to your own VPS and domain.</span>
+                        </div>
+                    </div>
+                    <div class="auth-panel__feature">
+                        <div class="auth-panel__feature-icon"><i class="ri-hand-heart-fill"></i></div>
+                        <div>
+                            <strong>Free forever plan</strong>
+                            <span>No credit card required.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Register Form -->
+        <div class="auth-form-wrapper">
+            <div class="auth-card" id="register-card">
+                <h2 class="auth-card__title">Create your account</h2>
+                <p class="auth-card__subtitle">Start building in under 60 seconds.</p>
+
+                <button class="btn btn--social" id="btn-telegram-register">
+                    <i class="ri-telegram-fill"></i>
+                    Sign up with Telegram
+                </button>
+
+                <div class="auth-divider">
+                    <span>or continue with email</span>
+                </div>
+
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label class="form-label" for="register-email">Email</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-mail-fill form-icon"></i>
+                            <input type="email" id="register-email" class="form-input" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-username">Username</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-user-3-fill form-icon"></i>
+                            <input type="text" id="register-username" class="form-input" placeholder="your-handle" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-password">Password</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-lock-password-fill form-icon"></i>
+                            <input type="password" id="register-password" class="form-input" placeholder="••••••••" autocomplete="new-password" required minlength="8">
+                            <button type="button" class="form-toggle-pw" id="toggle-register-pw" aria-label="Toggle password visibility">
+                                <i class="ri-eye-off-fill"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="password-strength">
+                            <div class="password-strength__bar">
+                                <div class="password-strength__fill" id="pw-strength-fill"></div>
+                            </div>
+                            <span class="password-strength__text" id="pw-strength-text">Enter a password</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="register-confirm">Confirm Password</label>
+                        <div class="form-input-wrapper">
+                            <i class="ri-lock-password-fill form-icon"></i>
+                            <input type="password" id="register-confirm" class="form-input" placeholder="••••••••" autocomplete="new-password" required>
+                        </div>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="register-terms" required>
+                        <label for="register-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn btn--glass btn--full btn--lg" id="register-submit">
+                        Create Account
+                    </button>
+                </form>
+
+                <p class="auth-card__footer">
+                    Already have an account? <a href="login.html" class="auth-link">Sign in</a>
+                </p>
+                <p class="auth-card__secure">
+                    <i class="ri-lock-2-line"></i> Encrypted connection. No personal data stored.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -132,15 +132,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== TILT ON FEATURE CARDS =====
-document.querySelectorAll('.bento__card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-2px) perspective(600px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+// ===== TILT ON FEATURE CARDS (desktop only) =====
+if (window.matchMedia('(min-width: 769px)').matches && !('ontouchstart' in window)) {
+  document.querySelectorAll('.bento__card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `translateZ(0) perspective(600px) rotateX(${-y * 3}deg) rotateY(${x * 3}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-  });
-});
+}

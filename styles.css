@@ -22,7 +22,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
@@ -30,8 +34,12 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font); background: var(--black); color: var(--text-1);
   line-height: 1.5; overflow-x: hidden; -webkit-font-smoothing: antialiased;
-  touch-action: manipulation;
+  touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+  position: relative;
+  width: 100%;
 }
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }

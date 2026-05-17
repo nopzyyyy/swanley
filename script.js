@@ -38,6 +38,22 @@ if (header) {
   });
 }
 
+// ===== VIDEO PLAY/PAUSE =====
+const videoPlay = document.getElementById('video-play');
+const videoEl = document.getElementById('tutorial-video');
+const videoWrap = document.getElementById('video-wrap');
+if (videoPlay && videoEl && videoWrap) {
+  videoPlay.addEventListener('click', () => {
+    videoEl.controls = true;
+    videoEl.play();
+    videoWrap.classList.add('playing');
+  });
+  videoEl.addEventListener('pause', () => {
+    videoEl.controls = false;
+    videoWrap.classList.remove('playing');
+  });
+}
+
 // ===== MOBILE MENU =====
 const navToggle = document.getElementById('nav-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
